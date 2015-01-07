@@ -1,15 +1,26 @@
 v0.22 + 1
 ------
 
+<<<<<<< HEAD
 ### Changes or improvements
 
 * Rename and copy detection is enabled for small files.
+	
+* The signature parameter in the ref-modifying functions has been
+  removed. Use `git_repository_set_ident()` and
+  `git_repository_ident()` to override the signature to be used.
 
 ### API additions
+
+* `git_repository_set_ident()` and `git_repository_ident()` serve to
+  set and query which identity will be used when writing to the
+  reflog.
 
 ### API removals
 
 ### Breaking API changes
+
+
 
 v0.22
 ------
