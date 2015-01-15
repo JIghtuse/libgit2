@@ -608,7 +608,7 @@ void test_online_push__multi(void)
 	cl_git_pass(git_reflog_read(&log, _repo, "refs/remotes/test/b1"));
 	entry = git_reflog_entry_byindex(log, 0);
 	if (entry) {
-		cl_assert_equal_s("test push", git_reflog_entry_message(entry));
+		cl_assert_equal_s("update by push", git_reflog_entry_message(entry));
 		cl_assert_equal_s("foo@example.com", git_reflog_entry_committer(entry)->email);
 	}
 
