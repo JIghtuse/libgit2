@@ -487,7 +487,7 @@ static void do_push(
 		if (check_progress_cb && expected_ret == GIT_EUSER)
 			data->transfer_progress_calls = GIT_EUSER;
 
-		error = git_remote_push(_remote, &specs, &opts, "test push");
+		error = git_remote_push(_remote, &specs, &opts);
 		git__free(specs.strings);
 
 		if (expected_ret < 0) {
